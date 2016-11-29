@@ -35,6 +35,7 @@ for(var i = 0; i < calcSigns.length; i++) {
 };
 
 calcEqual.addEventListener('click', function() {
+		calcDisplay.innerText = calcDisplay.innerText.slice(0, 12); // to block malicious code
 		calcHist.push(calcDisplay.innerText);
 		try {
 			calcDisplay.innerText = eval(calcDisplay.innerText);
