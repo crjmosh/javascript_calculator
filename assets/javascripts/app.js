@@ -7,6 +7,7 @@ var calcUp = document.getElementById('calc-up');
 var calcDown = document.getElementById('calc-down');
 var calcHist = ["END"];
 var histPosition = null;
+var calcDel = document.getElementById('calc-del');
 
 for(var i = 0; i < calcButtons.length; i++) {
 	var calcButton = calcButtons[i];
@@ -75,4 +76,9 @@ calcDown.addEventListener('click', function() {
 		calcDisplay.innerText = "";
 		histPosition = null;
 	}
+});
+
+calcDel.addEventListener('click', function() {
+	calcDisplay.innerText = calcDisplay.innerText.slice(0, -1);
+
 });
